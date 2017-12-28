@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Puppet2
 {
-    public partial class Form1 : Form
+    public partial class ConfigForm : Form
     {
-        public Form1()
+        public ConfigForm()
         {
             InitializeComponent();
+            SetEvents();
         }
     }
 }
