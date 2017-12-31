@@ -12,8 +12,11 @@ namespace Puppet2
 {
     public partial class MascotForm : Form
     {
-        public MascotForm()
+        private static Microphone microphone;
+
+        public MascotForm(Microphone mic)
         {
+            microphone = mic;
             InitializeComponent();
             Preprocess();
             Motion();
@@ -21,13 +24,14 @@ namespace Puppet2
 
         private void propertiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConfigForm configForm = new ConfigForm();
+            ConfigForm configForm = new ConfigForm(microphone);
             configForm.ShowDialog(this);
         }
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Save();
+            microphone.Dispose();
             Close();
         }
         
@@ -57,6 +61,12 @@ namespace Puppet2
         public static void ResetFrequency(int frequency)
         {
             blinkFrequency = frequency;
+        }
+
+        private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomForm customForm = new CustomForm();
+            customForm.ShowDialog(this);
         }
     }
 }

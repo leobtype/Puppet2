@@ -127,5 +127,41 @@ namespace Puppet2.Properties {
                 this["ConfigLocation"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int MicrophoneDeviceNumber {
+            get {
+                return ((int)(this["MicrophoneDeviceNumber"]));
+            }
+            set {
+                this["MicrophoneDeviceNumber"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public int MicrophoneVolumeLevelThreshold {
+            get {
+                return ((int)(this["MicrophoneVolumeLevelThreshold"]));
+            }
+            set {
+                this["MicrophoneVolumeLevelThreshold"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point CustomFormLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["CustomFormLocation"]));
+            }
+            set {
+                this["CustomFormLocation"] = value;
+            }
+        }
     }
 }

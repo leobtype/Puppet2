@@ -13,42 +13,90 @@ namespace Puppet2
         static Puppet2.Properties.Settings config = Properties.Settings.Default;
         static int blinkFrequency = config.BlinkFrequency;
 
+        private bool MOUSE_OPEN = false;
+        private bool EYES_OPEN = true;
+
         private void Motion()
         {
             Puppet2.Properties.Settings config = Properties.Settings.Default;
             timer.Tick += new EventHandler(TimerEventProcessor);
             timer.Interval = config.BlinkDuration;
             timer.Start();
-            //while (true) Application.DoEvents();
         }
 
-        private static void TimerEventProcessor(object obj, EventArgs e)
+        private void TimerEventProcessor(object obj, EventArgs e)
         {
-            if (pictureBoxes[1].Visible == true)
+            if (JudgeSound() == true)
             {
                 ToggleEyes();
-                return;
+                ToggleMouse();
             }
-
-            Random random = new Random((int)System.DateTime.Now.Ticks);
-            if (random.Next(1000) < blinkFrequency)
+            else
             {
                 ToggleEyes();
+                MOUSE_OPEN = false;
             }
+            ReDraw();
         }
 
-        private static void ToggleEyes()
+        private void ReDraw()
         {
-            if (pictureBoxes[0].Visible == true )
+            SuspendLayout();
+            if (!MOUSE_OPEN && EYES_OPEN)
             {
-                pictureBoxes[0].Visible = false;
-                pictureBoxes[1].Visible = true;
-            }
-            else if(pictureBoxes[1].Visible == true)
-            {
-                pictureBoxes[1].Visible = false;
                 pictureBoxes[0].Visible = true;
+                pictureBoxes[1].Visible = false;
+                pictureBoxes[2].Visible = false;
+                pictureBoxes[3].Visible = false;
             }
+            if (!MOUSE_OPEN && !EYES_OPEN)
+            {
+                pictureBoxes[1].Visible = true;
+                pictureBoxes[0].Visible = false;
+                pictureBoxes[2].Visible = false;
+                pictureBoxes[3].Visible = false;
+            }
+            if (MOUSE_OPEN && EYES_OPEN)
+            {
+                pictureBoxes[2].Visible = true;
+                pictureBoxes[0].Visible = false;
+                pictureBoxes[1].Visible = false;
+                pictureBoxes[3].Visible = false;
+            }
+            if (MOUSE_OPEN && !EYES_OPEN)
+            {
+                pictureBoxes[3].Visible = true;
+                pictureBoxes[0].Visible = false;
+                pictureBoxes[1].Visible = false;
+                pictureBoxes[2].Visible = false;
+            }
+            ResumeLayout(false);
+        }
+
+        private static bool JudgeSound()
+        {
+            return ( microphone.VolumeLevel > microphone.VolumeLevelThreshold ) ? true : false;
+        }
+
+        private void ToggleEyes()
+        {
+            if (EYES_OPEN == true)
+            {
+                Random random = new Random((int)System.DateTime.Now.Ticks);
+                if (random.Next(1000) < blinkFrequency)
+                {
+                    EYES_OPEN = false;
+                }
+            }
+            else
+            {
+                EYES_OPEN = true;
+            }
+        }
+
+        private void ToggleMouse()
+        {
+            MOUSE_OPEN = MOUSE_OPEN ? false : true;
         }
     }
 }

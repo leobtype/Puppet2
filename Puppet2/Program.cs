@@ -14,9 +14,12 @@ namespace Puppet2
         [STAThread]
         static void Main()
         {
+            UserFiles.SetupUserDirectories();
+            Microphone microphone = new Microphone();
+            microphone.Setup();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MascotForm());
+            Application.Run(new MascotForm(microphone));
         }
     }
 }

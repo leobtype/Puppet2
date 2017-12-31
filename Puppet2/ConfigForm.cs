@@ -12,10 +12,46 @@ namespace Puppet2
 {
     public partial class ConfigForm : Form
     {
-        public ConfigForm()
+        private Microphone microphone;
+        public ConfigForm(Microphone mic)
         {
+            microphone = mic;
             InitializeComponent();
             SetEvents();
+            SetMicrophoneDeviceList();
+            IndicateMicrophoneVolumeLevel();
         }
-    }
+
+        private void SetMicrophoneDeviceList()
+        {
+            List<string> microphoneProductNames = new List<string>();
+            if (microphone.DeviceCount == 0)
+            {
+                microphoneProductNames.Add("マイクロフォンなし");
+            }
+            else
+            {
+                for (int i = 0; i < microphone.DeviceCount; i++)
+                {
+                    microphoneProductNames.Add(microphone.deviceProductName(i));
+                }
+            }
+            string[] products = microphoneProductNames.ToArray();
+            comboBox1.Items.AddRange(products);
+            comboBox1.SelectedIndex = microphone.DeviceNumber;
+        }
+
+        private void IndicateMicrophoneVolumeLevel()
+        {
+            Timer timer = new Timer();
+            timer.Tick += new EventHandler(TimerEventProcessor);
+            timer.Interval = 1;
+            timer.Start();
+        }
+
+        private void TimerEventProcessor(object obj, EventArgs e)
+        {
+            progressBar1.Value = microphone.VolumeLevel;
+        }
+     }
 }
