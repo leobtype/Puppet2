@@ -163,5 +163,17 @@ namespace Puppet2.Properties {
                 this["CustomFormLocation"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public int SoundVolumeLevel1 {
+            get {
+                return ((int)(this["SoundVolumeLevel1"]));
+            }
+            set {
+                this["SoundVolumeLevel1"] = value;
+            }
+        }
     }
 }
