@@ -30,6 +30,32 @@ namespace Puppet2
             }
         }
 
+        private void Button_MouseClickSound(Button button, Button playButton, TrackBar trackBar, SoundPlayer soundPlayer, string file)
+        {
+            if (soundPlayer.waveOut != null)
+            {
+                soundPlayer.waveOut.Dispose();
+                soundPlayer.reader.Dispose();
+                try
+                {
+                    File.Delete(file);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+                button.Text = initialText;
+                playButton.Enabled = false;
+                trackBar.Value = 50;
+                trackBar.Enabled = false;
+            }
+        }
+
+        private void Button_MouseClickPlaySound(SoundPlayer soundPlayer, int volumeLevel)
+        {
+            soundPlayer.Play(volumeLevel);
+        }
+
         private void Button1_MouseClick(object sender, MouseEventArgs e)
         {
             Button_MouseClick(pictureBox1, button1, CustomPictures.FullPath[0]);
@@ -50,6 +76,16 @@ namespace Puppet2
             Button_MouseClick(pictureBox4, button4, CustomPictures.FullPath[3]);
         }
 
+        private void Button5_MouseClick(object sender, MouseEventArgs e)
+        {
+            Button_MouseClickSound(button5, button6, trackBar1, soundPlayers[0], CustomSounds.FullPath[0]);
+        }
+
+        private void Button6_MouseClick(object sender, MouseEventArgs e)
+        {
+            int volumeLevel = Properties.Settings.Default.SoundVolumeLevel1;
+            Button_MouseClickPlaySound(soundPlayers[0], volumeLevel);
+        }
 
     }
 }

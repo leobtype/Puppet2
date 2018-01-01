@@ -13,10 +13,12 @@ namespace Puppet2
     public partial class MascotForm : Form
     {
         private static Microphone microphone;
+        private static SoundPlayer soundPlayer;
 
-        public MascotForm(Microphone mic)
+        public MascotForm(Microphone mic, SoundPlayer sound)
         {
             microphone = mic;
+            soundPlayer = sound;
             InitializeComponent();
             Preprocess();
             Motion();
@@ -65,7 +67,7 @@ namespace Puppet2
 
         private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CustomForm customForm = new CustomForm();
+            CustomForm customForm = new CustomForm(soundPlayer);
             customForm.ShowDialog(this);
         }
     }

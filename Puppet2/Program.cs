@@ -15,11 +15,12 @@ namespace Puppet2
         static void Main()
         {
             UserFiles.SetupUserDirectories();
+            SoundPlayer soundPlayer = new SoundPlayer();
             Microphone microphone = new Microphone();
             microphone.Setup();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MascotForm(microphone));
+            Application.Run(new MascotForm(microphone, soundPlayer));
         }
     }
 }

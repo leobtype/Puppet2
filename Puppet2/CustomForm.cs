@@ -13,30 +13,27 @@ namespace Puppet2
 {
     public partial class CustomForm : Form
     {
-        public CustomForm()
+        private static List<SoundPlayer> soundPlayers = new List<SoundPlayer>();
+
+        public CustomForm(SoundPlayer sound)
         {
+            CreateSoundPlayers();
             InitializeComponent();
+            PictureBoxesInit();
+            PictureButtonsInit();
+            SoundButtonsInit();
+            SoundPlayButtonsInit();
+            SoundTrackBarsInit();
             SetEvents();
         }
 
-        private void SetEvents()
+        private void CreateSoundPlayers()
         {
-            FormClosed += new FormClosedEventHandler(Form_Closed);
-
-            button1.DragEnter += new DragEventHandler(Button_DragEnter);
-            button2.DragEnter += new DragEventHandler(Button_DragEnter);
-            button3.DragEnter += new DragEventHandler(Button_DragEnter);
-            button4.DragEnter += new DragEventHandler(Button_DragEnter);
-
-            button1.DragDrop += new DragEventHandler(Button1_DragDrop);
-            button2.DragDrop += new DragEventHandler(Button2_DragDrop);
-            button3.DragDrop += new DragEventHandler(Button3_DragDrop);
-            button4.DragDrop += new DragEventHandler(Button4_DragDrop);
-
-            button1.MouseClick += new MouseEventHandler(Button1_MouseClick);
-            button2.MouseClick += new MouseEventHandler(Button2_MouseClick);
-            button3.MouseClick += new MouseEventHandler(Button3_MouseClick);
-            button4.MouseClick += new MouseEventHandler(Button4_MouseClick);
+            for (int i = 0; i < 10; i++)
+            {
+                soundPlayers.Add(new SoundPlayer());
+                if (File.Exists(CustomSounds.FullPath[i])) soundPlayers[i].Init(CustomSounds.FullPath[i]);
+            }
         }
 
         private void Button_DragEnter(object sender, DragEventArgs e)
@@ -76,25 +73,23 @@ namespace Puppet2
 
         private void CustomForm_Load(object sender, EventArgs e)
         {
-            List<PictureBox> pictureBoxes = new List<PictureBox>();
-            pictureBoxes.Add(pictureBox1);
-            pictureBoxes.Add(pictureBox2);
-            pictureBoxes.Add(pictureBox3);
-            pictureBoxes.Add(pictureBox4);
-            List<Button> buttons = new List<Button>();
-            buttons.Add(button1);
-            buttons.Add(button2);
-            buttons.Add(button3);
-            buttons.Add(button4);
-            string[] file = CustomPictures.FullPath;
-
             int i = 0;
             foreach(PictureBox pictureBox in pictureBoxes)
             {
-                if (File.Exists(file[i]))
+                if (File.Exists(CustomPictures.FullPath[i]))
                 {
-                    InitializePictureBox(pictureBox, file[i]);
-                    InitializeButtonText(buttons[i]);
+                    InitializePictureBox(pictureBox, CustomPictures.FullPath[i]);
+                    InitializeButtonText(pictureButtons[i]);
+                }
+                i++;
+            }
+            i = 0;
+            foreach(SoundPlayer soundPlayer in soundPlayers)
+            {
+                if (File.Exists(CustomSounds.FullPath[i]))
+                {
+                    soundPlayButtons[i].Enabled = true;
+                    soundTrackBars[i].Enabled = true;
                 }
                 i++;
             }
@@ -102,10 +97,15 @@ namespace Puppet2
 
         private void Form_Closed(object sender, FormClosedEventArgs e)
         {
-            if (pictureBox1.Image != null) pictureBox1.Image.Dispose();
-            if (pictureBox2.Image != null) pictureBox2.Image.Dispose();
-            if (pictureBox3.Image != null) pictureBox3.Image.Dispose();
-            if (pictureBox4.Image != null) pictureBox4.Image.Dispose();
+            foreach(PictureBox pictureBox in pictureBoxes)
+            {
+                if (pictureBox.Image != null) pictureBox.Image.Dispose();
+            }
+            foreach(SoundPlayer soundPlayer in soundPlayers)
+            {
+                soundPlayer.Dispose();
+            }
+            soundPlayers.RemoveRange(0, soundPlayers.Count);
             Dispose();
         }
     }

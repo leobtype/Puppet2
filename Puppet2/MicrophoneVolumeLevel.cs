@@ -49,16 +49,6 @@ namespace Puppet2
                     volumeLevel = 0;
                     break;
             }
-
-            return;
-            // 8bit, 16bitの両方に対応する必要あり
-            for (int i = 0; i < e.BytesRecorded; i += 2)
-            {
-                short sample = (short)((e.Buffer[i + 1] << 8) |
-                                        e.Buffer[i + 0]);
-                float sample32 = sample / 32768f;
-                volumeLevel = Math.Abs((int)(sample32 * 100));
-            }
         }
 
         public int GetVolumeLevel()

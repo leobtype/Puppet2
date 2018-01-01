@@ -6,27 +6,39 @@ using System.Threading.Tasks;
 using NAudio;
 using NAudio.Wave;
 using System.Threading;
+using System.IO;
 
 namespace Puppet2
 {
     public class SoundPlayer
     {
-        public SoundPlayer(string file)
+        public SoundPlayer()
         {
-            Mp3FileReader reader = new Mp3FileReader(file);
+            if (File.Exists(CustomSounds.Current))
+            {
+                Init(CustomSounds.Current);
+            }
+        }
+
+        public WaveOut waveOut;
+        public Mp3FileReader reader;
+        private BlockAlignReductionStream baStream;
+
+        public bool Init(string file)
+        {
+            reader = new Mp3FileReader(file);
             WaveStream pcmStream = WaveFormatConversionStream.CreatePcmStream(reader);
-            BlockAlignReductionStream baStream = new BlockAlignReductionStream(pcmStream);
+            baStream = new BlockAlignReductionStream(pcmStream);
 
             waveOut = new WaveOut(WaveCallbackInfo.FunctionCallback());
             waveOut.Init(baStream);
+            return true;
         }
 
-        private WaveOut waveOut;
-        private BlockAlignReductionStream baStream;
-
-        public void Play()
+        public void Play(int volumeLevel)
         {
             baStream.Position = 0;
+            waveOut.Volume = 1.0f * volumeLevel / 100;
             waveOut.Play();
             while (waveOut.PlaybackState == PlaybackState.Playing)
             {
@@ -41,6 +53,13 @@ namespace Puppet2
                 waveOut.Stop();
                 baStream.Position = 0;
             }
+        }
+
+        public void Dispose()
+        {
+            if(waveOut != null) waveOut.Dispose();
+            if(reader != null) reader.Dispose();
+            if(baStream != null) baStream.Dispose();
         }
     }
 }

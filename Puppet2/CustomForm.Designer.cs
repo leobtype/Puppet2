@@ -101,6 +101,7 @@
             // 
             // button6
             // 
+            this.button6.Enabled = false;
             this.button6.Location = new System.Drawing.Point(216, 30);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(62, 45);
@@ -111,6 +112,7 @@
             // trackBar1
             // 
             this.trackBar1.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::Puppet2.Properties.Settings.Default, "SoundVolumeLevel1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.trackBar1.Enabled = false;
             this.trackBar1.Location = new System.Drawing.Point(8, 30);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
@@ -130,6 +132,7 @@
             // 
             // button5
             // 
+            this.button5.AllowDrop = true;
             this.button5.Location = new System.Drawing.Point(7, 81);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(271, 23);
