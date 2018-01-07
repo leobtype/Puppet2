@@ -16,6 +16,7 @@ namespace Puppet2
         private void Preprocess()
         {
             this.SuspendLayout();
+            SetTransparency();
             List<Bitmap> currentBitmaps = SetupBitmaps();
             pictureBoxes = CreatePictureBoxes(currentBitmaps);
             foreach (PictureBox pictureBox in pictureBoxes)
@@ -27,6 +28,14 @@ namespace Puppet2
             ClientSize = new Size(pictureBoxes[0].Size.Width, pictureBoxes[0].Size.Height);
             pictureBoxes[0].Visible = true;
             this.ResumeLayout(false);
+        }
+
+        private void SetTransparency()
+        {
+            if (Properties.Settings.Default.Transparency == true)
+            {
+                TransparencyKey = Properties.Settings.Default.MascotBackColor;
+            }
         }
 
         private List<Bitmap> SetupBitmaps()

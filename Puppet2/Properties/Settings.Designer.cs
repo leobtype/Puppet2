@@ -37,7 +37,7 @@ namespace Puppet2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 17")]
         public global::System.Drawing.Point Location {
             get {
                 return ((global::System.Drawing.Point)(this["Location"]));
@@ -281,6 +281,30 @@ namespace Puppet2.Properties {
             }
             set {
                 this["SoundVolumeLevel0"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Control")]
+        public global::System.Drawing.Color MascotBackColor {
+            get {
+                return ((global::System.Drawing.Color)(this["MascotBackColor"]));
+            }
+            set {
+                this["MascotBackColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Transparency {
+            get {
+                return ((bool)(this["Transparency"]));
+            }
+            set {
+                this["Transparency"] = value;
             }
         }
     }

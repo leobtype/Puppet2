@@ -26,7 +26,7 @@ namespace Puppet2
 
         private void propertiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConfigForm configForm = new ConfigForm(microphone);
+            ConfigForm configForm = new ConfigForm(this, microphone);
             configForm.ShowDialog(this);
         }
 

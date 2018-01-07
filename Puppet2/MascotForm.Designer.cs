@@ -70,13 +70,14 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = global::Puppet2.Properties.Settings.Default.MascotBackColor;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.ControlBox = false;
             this.DataBindings.Add(new System.Windows.Forms.Binding("TopMost", global::Puppet2.Properties.Settings.Default, "TopMost", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("Location", global::Puppet2.Properties.Settings.Default, "Location", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Puppet2.Properties.Settings.Default, "MascotBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = global::Puppet2.Properties.Settings.Default.Location;

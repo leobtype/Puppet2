@@ -17,6 +17,34 @@ namespace Puppet2
             trackBar2.ValueChanged += new EventHandler(TrackBar2_ValueChanged);
             comboBox1.SelectedValueChanged += new EventHandler(ComboBox1_SelectedValueChanged);
             trackBar3.ValueChanged += new EventHandler(TrackBar3_ValueChanged);
+            button1.MouseClick += new MouseEventHandler(Button1_MouseClick);
+            checkBox2.CheckedChanged += new EventHandler(CheckBox2_CheckedChanged);
+        }
+
+        private void CheckBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                mascotForm.TransparencyKey = Properties.Settings.Default.MascotBackColor;
+                Properties.Settings.Default.Transparency = true;
+            }
+            else
+            {
+                mascotForm.TransparencyKey = System.Drawing.Color.Empty;
+                Properties.Settings.Default.Transparency = false;
+            }
+        }
+
+        private void Button1_MouseClick(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Properties.Settings.Default.MascotBackColor = colorDialog1.Color;
+                if (checkBox2.Checked)
+                {
+                    mascotForm.TransparencyKey = colorDialog1.Color;
+                }
+            }
         }
 
         private void ComboBox1_SelectedValueChanged(object sender, EventArgs e)

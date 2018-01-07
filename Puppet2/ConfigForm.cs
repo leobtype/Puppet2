@@ -12,9 +12,11 @@ namespace Puppet2
 {
     public partial class ConfigForm : Form
     {
+        private MascotForm mascotForm;
         private Microphone microphone;
-        public ConfigForm(Microphone mic)
+        public ConfigForm(MascotForm form, Microphone mic)
         {
+            mascotForm = form;
             microphone = mic;
             InitializeComponent();
             SetEvents();
@@ -53,5 +55,5 @@ namespace Puppet2
         {
             progressBar1.Value = microphone.VolumeLevel;
         }
-     }
+    }
 }

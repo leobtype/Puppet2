@@ -41,6 +41,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.trackBar3 = new System.Windows.Forms.TrackBar();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
@@ -81,7 +86,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 55);
+            this.label2.Location = new System.Drawing.Point(13, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 12);
             this.label2.TabIndex = 2;
@@ -91,7 +96,7 @@
             // 
             this.trackBar1.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::Puppet2.Properties.Settings.Default, "BlinkDuration", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.trackBar1.LargeChange = 100;
-            this.trackBar1.Location = new System.Drawing.Point(15, 70);
+            this.trackBar1.Location = new System.Drawing.Point(12, 109);
             this.trackBar1.Maximum = 1000;
             this.trackBar1.Minimum = 50;
             this.trackBar1.Name = "trackBar1";
@@ -104,7 +109,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 118);
+            this.label3.Location = new System.Drawing.Point(13, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(154, 12);
             this.label3.TabIndex = 4;
@@ -114,7 +119,7 @@
             // 
             this.trackBar2.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::Puppet2.Properties.Settings.Default, "BlinkFrequency", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.trackBar2.LargeChange = 100;
-            this.trackBar2.Location = new System.Drawing.Point(12, 138);
+            this.trackBar2.Location = new System.Drawing.Point(12, 172);
             this.trackBar2.Maximum = 1000;
             this.trackBar2.Minimum = 50;
             this.trackBar2.Name = "trackBar2";
@@ -127,7 +132,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 201);
+            this.comboBox1.Location = new System.Drawing.Point(12, 235);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(260, 20);
             this.comboBox1.TabIndex = 6;
@@ -135,7 +140,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 186);
+            this.label4.Location = new System.Drawing.Point(13, 220);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 12);
             this.label4.TabIndex = 7;
@@ -143,7 +148,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 239);
+            this.progressBar1.Location = new System.Drawing.Point(12, 273);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(260, 23);
             this.progressBar1.TabIndex = 8;
@@ -151,7 +156,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 224);
+            this.label5.Location = new System.Drawing.Point(13, 258);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 12);
             this.label5.TabIndex = 9;
@@ -160,7 +165,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 270);
+            this.label6.Location = new System.Drawing.Point(13, 299);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 12);
             this.label6.TabIndex = 10;
@@ -169,7 +174,7 @@
             // trackBar3
             // 
             this.trackBar3.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::Puppet2.Properties.Settings.Default, "MicrophoneVolumeLevelThreshold", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.trackBar3.Location = new System.Drawing.Point(12, 285);
+            this.trackBar3.Location = new System.Drawing.Point(12, 314);
             this.trackBar3.Maximum = 100;
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.Size = new System.Drawing.Size(260, 45);
@@ -190,6 +195,47 @@
             this.checkBox1.Text = "常に最前面に表示";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 54);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 12);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "背景色";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = global::Puppet2.Properties.Settings.Default.MascotBackColor;
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Puppet2.Properties.Settings.Default, "MascotBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(12, 70);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 19);
+            this.textBox1.TabIndex = 14;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(118, 68);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(49, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "色選択";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = global::Puppet2.Properties.Settings.Default.Transparency;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::Puppet2.Properties.Settings.Default, "Transparency", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox2.Location = new System.Drawing.Point(224, 72);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(48, 16);
+            this.checkBox2.TabIndex = 16;
+            this.checkBox2.Text = "透明";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // ConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -197,7 +243,11 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(284, 352);
+            this.ClientSize = new System.Drawing.Size(284, 381);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.trackBar3);
             this.Controls.Add(this.label6);
@@ -243,5 +293,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TrackBar trackBar3;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
