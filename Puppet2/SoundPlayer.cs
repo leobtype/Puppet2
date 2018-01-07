@@ -14,10 +14,6 @@ namespace Puppet2
     {
         public SoundPlayer()
         {
-            if (File.Exists(CustomSounds.Current))
-            {
-                Init(CustomSounds.Current);
-            }
         }
 
         public WaveOut waveOut;

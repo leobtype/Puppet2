@@ -13,7 +13,8 @@ namespace Puppet2
         private void SoundTrackBarsInit()
         {
             List<TrackBar> list = new List<TrackBar>() {
-                trackBar1
+                trackBar1, trackBar2, trackBar3, trackBar4, trackBar5,
+                trackBar6, trackBar7, trackBar8, trackBar9, trackBar10
             };
             soundTrackBars.AddRange(list);
         }

@@ -13,10 +13,16 @@ namespace Puppet2
         private void PictureButtonsInit()
         {
             List<Button> list = new List<Button>() {
-                button1,
-                button2,
-                button3,
-                button4
+                button1, button2, button3, button4,
+                button7, button8, button9, button10,
+                button13, button14, button15, button16,
+                button19, button20, button21, button22,
+                button25, button26, button27, button28,
+                button31, button32, button33, button34,
+                button37, button38, button39, button40,
+                button43, button44, button45, button46,
+                button49, button50, button51, button52,
+                button55, button56, button57, button58
             };
             pictureButtons.AddRange(list);
         }

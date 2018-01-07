@@ -14,7 +14,8 @@ namespace Puppet2
         private void SoundButtonsInit()
         {
             List<Button> list = new List<Button>() {
-                button5
+                button5, button11, button17, button23, button29,
+                button35, button41, button47, button53, button59
             };
             soundButtons.AddRange(list);
             int i = 0;

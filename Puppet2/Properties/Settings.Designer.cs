@@ -175,5 +175,113 @@ namespace Puppet2.Properties {
                 this["SoundVolumeLevel1"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public int SoundVolumeLevel2 {
+            get {
+                return ((int)(this["SoundVolumeLevel2"]));
+            }
+            set {
+                this["SoundVolumeLevel2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public int SoundVolumeLevel3 {
+            get {
+                return ((int)(this["SoundVolumeLevel3"]));
+            }
+            set {
+                this["SoundVolumeLevel3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public int SoundVolumeLevel4 {
+            get {
+                return ((int)(this["SoundVolumeLevel4"]));
+            }
+            set {
+                this["SoundVolumeLevel4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public int SoundVolumeLevel5 {
+            get {
+                return ((int)(this["SoundVolumeLevel5"]));
+            }
+            set {
+                this["SoundVolumeLevel5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public int SoundVolumeLevel6 {
+            get {
+                return ((int)(this["SoundVolumeLevel6"]));
+            }
+            set {
+                this["SoundVolumeLevel6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public int SoundVolumeLevel7 {
+            get {
+                return ((int)(this["SoundVolumeLevel7"]));
+            }
+            set {
+                this["SoundVolumeLevel7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public int SoundVolumeLevel8 {
+            get {
+                return ((int)(this["SoundVolumeLevel8"]));
+            }
+            set {
+                this["SoundVolumeLevel8"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public int SoundVolumeLevel9 {
+            get {
+                return ((int)(this["SoundVolumeLevel9"]));
+            }
+            set {
+                this["SoundVolumeLevel9"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public int SoundVolumeLevel0 {
+            get {
+                return ((int)(this["SoundVolumeLevel0"]));
+            }
+            set {
+                this["SoundVolumeLevel0"] = value;
+            }
+        }
     }
 }

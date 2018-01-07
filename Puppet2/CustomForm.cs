@@ -103,7 +103,9 @@ namespace Puppet2
             }
             foreach(SoundPlayer soundPlayer in soundPlayers)
             {
-                soundPlayer.Dispose();
+                if(soundPlayer.waveOut != null) soundPlayer.waveOut.Dispose();
+                if (soundPlayer.reader != null) soundPlayer.reader.Dispose();
+                if (soundPlayer != null) soundPlayer.Dispose();
             }
             soundPlayers.RemoveRange(0, soundPlayers.Count);
             Dispose();
