@@ -88,22 +88,6 @@ namespace Puppet2.Properties {
             }
         }
         
-        /// <summary>
-        /// 表示中のマスコット
-        /// </summary>
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Configuration.SettingsDescriptionAttribute("表示中のマスコット")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0_default")]
-        public string CurrentMascot {
-            get {
-                return ((string)(this["CurrentMascot"]));
-            }
-            set {
-                this["CurrentMascot"] = value;
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("100")]

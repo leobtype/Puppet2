@@ -70,6 +70,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = global::Puppet2.Properties.Settings.Default.MascotBackColor;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(284, 261);
