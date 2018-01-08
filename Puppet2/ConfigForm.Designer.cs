@@ -229,11 +229,11 @@
             this.checkBox2.Checked = global::Puppet2.Properties.Settings.Default.Transparency;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::Puppet2.Properties.Settings.Default, "Transparency", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox2.Location = new System.Drawing.Point(224, 72);
+            this.checkBox2.Location = new System.Drawing.Point(197, 72);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(48, 16);
+            this.checkBox2.Size = new System.Drawing.Size(72, 16);
             this.checkBox2.TabIndex = 16;
-            this.checkBox2.Text = "透明";
+            this.checkBox2.Text = "背景透過";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // ConfigForm

@@ -106,7 +106,7 @@ namespace Puppet2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
         public decimal PictureScale {
             get {
                 return ((decimal)(this["PictureScale"]));

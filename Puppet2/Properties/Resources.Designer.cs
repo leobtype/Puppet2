@@ -63,9 +63,9 @@ namespace Puppet2.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap image0a {
+        internal static System.Drawing.Bitmap default0 {
             get {
-                object obj = ResourceManager.GetObject("image0a", resourceCulture);
+                object obj = ResourceManager.GetObject("default0", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Puppet2.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap image0b {
+        internal static System.Drawing.Bitmap default1 {
             get {
-                object obj = ResourceManager.GetObject("image0b", resourceCulture);
+                object obj = ResourceManager.GetObject("default1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Puppet2.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap image0c {
+        internal static System.Drawing.Bitmap default2 {
             get {
-                object obj = ResourceManager.GetObject("image0c", resourceCulture);
+                object obj = ResourceManager.GetObject("default2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Puppet2.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap image0d {
+        internal static System.Drawing.Bitmap default3 {
             get {
-                object obj = ResourceManager.GetObject("image0d", resourceCulture);
+                object obj = ResourceManager.GetObject("default3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

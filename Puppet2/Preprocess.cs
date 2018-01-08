@@ -59,10 +59,10 @@ namespace Puppet2
             }
             else
             {
-                currentBitmaps.Add(Properties.Resources.image0a);
-                currentBitmaps.Add(Properties.Resources.image0b);
-                currentBitmaps.Add(Properties.Resources.image0c);
-                currentBitmaps.Add(Properties.Resources.image0d);
+                currentBitmaps.Add(Properties.Resources.default0);
+                currentBitmaps.Add(Properties.Resources.default1);
+                currentBitmaps.Add(Properties.Resources.default2);
+                currentBitmaps.Add(Properties.Resources.default3);
             }
             return currentBitmaps;
         }

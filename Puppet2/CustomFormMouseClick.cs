@@ -263,7 +263,7 @@ namespace Puppet2
 
         private void Button39_MouseClick(object sender, MouseEventArgs e)
         {
-            Button_MouseClick(2);
+            Button_MouseClick(26);
         }
 
         private void Button40_MouseClick(object sender, MouseEventArgs e)
