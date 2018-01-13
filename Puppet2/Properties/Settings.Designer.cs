@@ -37,7 +37,7 @@ namespace Puppet2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0, 17")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
         public global::System.Drawing.Point Location {
             get {
                 return ((global::System.Drawing.Point)(this["Location"]));
@@ -289,6 +289,18 @@ namespace Puppet2.Properties {
             }
             set {
                 this["Transparency"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool LocationInitialized {
+            get {
+                return ((bool)(this["LocationInitialized"]));
+            }
+            set {
+                this["LocationInitialized"] = value;
             }
         }
     }
