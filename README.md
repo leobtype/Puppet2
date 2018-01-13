@@ -2,7 +2,12 @@
 Desktop mascot for streamers.  生放送主向けデスクトップ口パクツール
 
 ## 概要
-Puppetのオリジナルとも云えるdoppeLが配布終了となったことを受けて、主に生放送主向けに改良を加えて開発しました。
+[Puppet(version 1)](https://github.com/leo-typeb/Puppet/)のオリジナルとも云える[doppeL](http://com.nicovideo.jp/community/co247464)が配布終了となったことを受けて、主に生放送主向けに改良を加えて開発しました。
+
+## 機能
+マイク入力に合わせて、口をパクパク動かします。また一定の頻度でまばたきをします。
+
+マスコットはカスタマイズ可能です。ショートカットキーで10セットまでマスコットの切り替えが可能で、これをアクションと呼びます。アクション時にサウンドを鳴らすことができます。
 
 ## 動作環境
 Windows 10
@@ -21,14 +26,10 @@ Puppet2はオープンソースのフリーソフトです。ライセンスはG
 
 ## 謝辞
 ### キャラクターなんとか機
-デフォルトのマスコットの作成に、K.Hみっくす　ふぁーすと えでぃしょん「キャラクターなんとか機」を利用させて頂きました。
-
-http://khmix.sakura.ne.jp/download.shtml
+デフォルトのマスコットの作成に、K.Hみっくす　ふぁーすと えでぃしょん[キャラクターなんとか機](http://khmix.sakura.ne.jp/download.shtml)を利用させて頂きました。
 
 ### naudio
-マイク入力およびサウンド再生のために、naudioというライブラリを内蔵しています。
-
-https://naudio.codeplex.com/
+マイク入力およびサウンド再生のために、[naudio](https://naudio.codeplex.com/)というライブラリを内蔵しています。
 
 ## Puppet(version 1)からの変更点
 ### 軽量化
