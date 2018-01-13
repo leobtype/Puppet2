@@ -46,6 +46,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Puppet2.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Puppet2.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="NAudio, Version=1.8.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\NAudio.1.8.4\lib\net35\NAudio.dll</HintPath>
@@ -186,6 +192,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\default3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Puppet2.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
