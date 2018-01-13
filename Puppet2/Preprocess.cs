@@ -27,7 +27,23 @@ namespace Puppet2
             }
             ClientSize = new Size(pictureBoxes[0].Size.Width, pictureBoxes[0].Size.Height);
             pictureBoxes[0].Visible = true;
+            SetLocation();
             this.ResumeLayout(false);
+        }
+
+        private void SetLocation()
+        {
+            if (Properties.Settings.Default.LocationInitialized == false)
+            {
+                int screenHeight = Screen.PrimaryScreen.Bounds.Height;
+                int screenWidth = Screen.PrimaryScreen.Bounds.Width;
+                int pictureHeight = pictureBoxes[0].Height;
+                int pictureWidth = pictureBoxes[0].Width;
+                Point location = new Point(screenWidth - pictureWidth, screenHeight - pictureHeight);
+                this.Location = location;
+                Properties.Settings.Default.Location = location;
+                Properties.Settings.Default.LocationInitialized = true;
+            }
         }
 
         private void SetTransparency()

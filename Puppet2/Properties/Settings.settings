@@ -6,7 +6,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="Location" Type="System.Drawing.Point" Scope="User">
-      <Value Profile="(Default)">0, 17</Value>
+      <Value Profile="(Default)">0, 0</Value>
     </Setting>
     <Setting Name="Title" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Puppet2</Value>
@@ -67,6 +67,9 @@
     </Setting>
     <Setting Name="Transparency" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LocationInitialized" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>
