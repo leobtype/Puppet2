@@ -20,7 +20,11 @@ namespace Puppet2
         public int DeviceNumber
         {
             get { return deviceNumber; }
-            set { deviceNumber = DeviceNumber; }
+            set
+            {
+                deviceNumber = value;
+                Properties.Settings.Default.MicrophoneDeviceNumber = deviceNumber;
+            }
         }
 
         private WaveInEvent waveInEvent;
@@ -73,12 +77,18 @@ namespace Puppet2
 
         public void Stop()
         {
-            waveInEvent.StopRecording();
+            if (waveInEvent != null)
+            {
+                waveInEvent.StopRecording();
+            }
         }
 
         public void Dispose()
         {
-            waveInEvent.Dispose();
+            if (waveInEvent != null)
+            {
+                waveInEvent.Dispose();
+            }
         }
 
     }

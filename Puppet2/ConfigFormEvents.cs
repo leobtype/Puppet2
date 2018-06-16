@@ -48,10 +48,17 @@ namespace Puppet2
         }
 
         private void ComboBox1_SelectedValueChanged(object sender, EventArgs e)
-        {
-            microphone.Stop();
-            microphone.DeviceNumber = comboBox1.SelectedIndex;
-            microphone.Start();
+        {            
+            if (microphone.WaveInEvent != null)
+            {
+                microphone.Stop();
+                microphone.Dispose();
+                microphone.DeviceNumber = comboBox1.SelectedIndex;
+                microphone.WaveInEvent.DeviceNumber = comboBox1.SelectedIndex;
+                microphone.Setup();
+                microphone.Start();
+            }
+            
         }
 
         private void TrackBar1_ValueChanged(object sender, EventArgs e)

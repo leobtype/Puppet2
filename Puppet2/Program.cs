@@ -17,7 +17,7 @@ namespace Puppet2
             UserFiles.SetupUserDirectories();
             SoundPlayer soundPlayer = new SoundPlayer();
             Microphone microphone = new Microphone();
-            microphone.Setup();
+            //microphone.Setup();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MascotForm(microphone, soundPlayer));
