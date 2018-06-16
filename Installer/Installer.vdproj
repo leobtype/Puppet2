@@ -33,26 +33,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B7AFE2F7BE92FAC76F0CD2F20A3EFD1F"
+        "MsmKey" = "8:_F05C3AE1894343C3ADF6CB03F3AD719C"
         "OwnerKey" = "8:_7CFC6E31E61C421C971D73575D47A060"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7CFC6E31E61C421C971D73575D47A060"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_F05C3AE1894343C3ADF6CB03F3AD719C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_192BFFD7BC3EFC4F27F65797FC648EDD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7CFC6E31E61C421C971D73575D47A060"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B7AFE2F7BE92FAC76F0CD2F20A3EFD1F"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -73,6 +73,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -89,6 +97,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -169,14 +193,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B7AFE2F7BE92FAC76F0CD2F20A3EFD1F"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F05C3AE1894343C3ADF6CB03F3AD719C"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:NAudio, Version=1.8.4.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_B7AFE2F7BE92FAC76F0CD2F20A3EFD1F"
+                    "_F05C3AE1894343C3ADF6CB03F3AD719C"
                     {
                     "Name" = "8:NAudio.dll"
                     "Attributes" = "3:512"
@@ -267,15 +291,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Puppet2"
-        "ProductCode" = "8:{1D6EAA36-8541-40A0-8E5D-55ADA8E22D47}"
-        "PackageCode" = "8:{AD11EBCD-69DD-43CF-83C0-F10F8FC88772}"
+        "ProductCode" = "8:{7C81926C-6745-4208-B7A1-05452A462CEA}"
+        "PackageCode" = "8:{48CDA1AF-2A39-437C-BB74-003F1AF04BE9}"
         "UpgradeCode" = "8:{34589894-2666-4F2B-BA9D-07F44642D057}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:2.0.0"
+        "ProductVersion" = "8:2.1.0"
         "Manufacturer" = "8:Leo-typeb"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
